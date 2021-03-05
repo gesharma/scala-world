@@ -20,8 +20,8 @@ object TriangleCalc extends App {
 				case head :: tail => processCalculation(tail, add(head, rowIndex-1), rowIndex+1)
 			}
 		}
-		val ipfileStream = getClass.getResourceAsStream("triangle.txt")
-		val readlines = Source.fromInputStream(ipfileStream).getLines.toList
+		//val ipfileStream = getClass.getResourceAsStream("triangle.txt")
+		val readlines = Source.fromFile("/home/gasharma/git/scala-world/src/main/resource/triangle.txt").getLines.toList
 
 		processCalculation(readlines, 0, 0)
 
